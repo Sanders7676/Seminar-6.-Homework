@@ -55,6 +55,11 @@ double numberB2 = InputInt();
 
 double[] pointOfIntersectionOfLines = FindCoordinatesOfPointOfIntersectionOfLlines(numberK1, numberB1, numberK2, numberB2);
 
+Console.WriteLine("Прямые пересекаются в точке: ");
+
+PrintArray(pointOfIntersectionOfLines);
+
+
 try
 {
     double[] arr = FindCoordinatesOfPointOfIntersectionOfLlines(numberK1, numberB1, numberK2, numberB2);
@@ -65,13 +70,6 @@ catch(Exception ex)
     return;
 }
 
-Console.WriteLine();
-
-Console.Write("Прямые пересекаются в точке c координатами: ");
-
-PrintArray(pointOfIntersectionOfLines);
-
-Console.WriteLine();
 
 
 
@@ -122,5 +120,5 @@ double InputInt()
 
 void PrintArray(double[] array)
 {
-    Console.WriteLine($"({string.Join(" ; ", array)})");
+    Console.WriteLine($"({string.Join(", ", array)})");
 }
